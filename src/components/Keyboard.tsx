@@ -49,7 +49,7 @@ function Keyboard({ onkeypress,word,guessedLetter,wrongguess }: KeyboardProps) {
     handleKeyPress(key);
   };
   return (
-    <div className="flex flex-col items-center gap-2 mt-[27rem] relative">
+    <div className="flex flex-col items-center gap-2 mt-[26rem] relative">
       {keys.map((row, rowIndex) => (
         <div key={rowIndex} className="flex gap-1">
           {row.map((key) => (

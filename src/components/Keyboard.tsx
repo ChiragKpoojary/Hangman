@@ -49,7 +49,7 @@ function Keyboard({ onkeypress,word,guessedLetter,wrongguess }: KeyboardProps) {
     handleKeyPress(key);
   };
   return (
-    <div className="flex flex-col items-center gap-2 mt-[27rem]">
+    <div className="flex flex-col items-center gap-2 mt-[27rem] relative">
       {keys.map((row, rowIndex) => (
         <div key={rowIndex} className="flex gap-1">
           {row.map((key) => (
@@ -57,7 +57,7 @@ function Keyboard({ onkeypress,word,guessedLetter,wrongguess }: KeyboardProps) {
               key={key}
               onClick={() => handleButtonClick(key)}
              
-              className={`w-[1.6rem] h-10 rounded bg-gray-200 flex items-center justify-center font-bold text-lg md:w-[4rem] xl:w-[6rem] ${pressedKeys[key] ? 'opacity-50 cursor-not-allowed' : ''}`}
+              className={`w-[2rem] h-10 rounded bg-gray-200 flex items-center justify-center font-bold text-lg md:w-[4rem] xl:w-[6rem] ${pressedKeys[key] ? 'opacity-50 cursor-not-allowed' : ''}`}
               disabled={pressedKeys[key]||gameover}
             >
               {key}
